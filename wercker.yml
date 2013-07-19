@@ -1,0 +1,8 @@
+box : arnoudj/ubuntu12.04-puppet-current
+build :
+  steps :
+    - script:
+        name : install manifest
+        code : |
+          cd $WERCKER_ROOT
+          facter

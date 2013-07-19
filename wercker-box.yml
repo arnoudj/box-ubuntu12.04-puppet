@@ -1,0 +1,18 @@
+name: ubuntu12.04-puppet-current
+version: 0.0.1
+description: Base box to use for running puppet manifests
+type : main
+platform : ubuntu@12.04
+keywords :
+  - puppet
+packages :
+  - puppet
+script : |
+  sudo apt-get update
+  sudo apt-get install -yq wget curl
+  export PUPPETLABS-RELEASE_DEB='http://apt.puppetlabs.com/puppetlabs-release-precise.deb'
+  cd
+  wget "http://apt.puppetlabs.com/$PUPPETLABS-RELEASE_DEB"
+  sudo apt-get update
+  rm $PUPPETLABS-RELEASE_DEB
+  sudo apt-get install puppet facter
