@@ -1,4 +1,4 @@
-box : arnoudj/ubuntu12.04-puppet-current
+box : arnoudj/ubuntu12.04-puppet
 build :
   steps :
     - script:
