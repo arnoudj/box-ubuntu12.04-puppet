@@ -10,8 +10,9 @@ packages :
 script : |
   sudo apt-get update
   sudo apt-get install -yq wget curl
-  export PUPPETLABS-RELEASE_DEB='http://apt.puppetlabs.com/puppetlabs-release-precise.deb'
+  export PUPPETLABS-RELEASE_DEB=puppetlabs-release-precise.deb
   cd
-  wget "http://apt.puppetlabs.com/$PUPPETLABS-RELEASE_DEB"
+  wget http://apt.puppetlabs.com/$PUPPETLABS-RELEASE_DEB
   sudo apt-get update
   sudo apt-get install puppet facter
+  rm $PUPPETLABS-RELEASE_DEB
