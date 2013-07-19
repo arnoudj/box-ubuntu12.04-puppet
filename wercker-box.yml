@@ -15,4 +15,4 @@ script : |
   wget http://apt.puppetlabs.com/$PUPPETLABS_RELEASE_DEB
   sudo apt-get update
   sudo apt-get install puppet facter
-  rm $PUPPETLABS-RELEASE_DEB
+  rm $PUPPETLABS_RELEASE_DEB
