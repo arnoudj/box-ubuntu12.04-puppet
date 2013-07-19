@@ -1,4 +1,4 @@
-name: arnoudj/box-ubuntu12.04-puppet
+name: puppet
 version: 0.0.1
 description: Base box to use for running puppet manifests
 type : main
