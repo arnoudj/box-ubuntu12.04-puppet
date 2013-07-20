@@ -1,5 +1,5 @@
 name: puppet
-version: 0.0.3
+version: 0.0.4
 description: Base box to use for running puppet manifests
 type : main
 platform : ubuntu@12.04
