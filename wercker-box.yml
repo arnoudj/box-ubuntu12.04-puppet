@@ -1,4 +1,4 @@
-name: arnoudj/box-ubuntu12.04-puppet
+name: puppet
 version: 0.0.1
 description: Base box to use for running puppet manifests
 type : main
@@ -10,9 +10,9 @@ packages :
 script : |
   sudo apt-get update
   sudo apt-get install -yq wget curl
-  export PUPPETLABS-RELEASE_DEB='http://apt.puppetlabs.com/puppetlabs-release-precise.deb'
+  export PUPPETLABS_RELEASE_DEB=puppetlabs-release-precise.deb
   cd
-  wget "http://apt.puppetlabs.com/$PUPPETLABS-RELEASE_DEB"
+  wget http://apt.puppetlabs.com/$PUPPETLABS_RELEASE_DEB
   sudo apt-get update
-  rm $PUPPETLABS-RELEASE_DEB
   sudo apt-get install puppet facter
+  rm $PUPPETLABS_RELEASE_DEB
