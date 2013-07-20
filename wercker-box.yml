@@ -17,5 +17,5 @@ script : |
   sudo apt-get install puppet facter
   rm $PUPPETLABS_RELEASE_DEB
 env:
-  MANIFEST_DIR: $WERCKER_ROOT$$/manifests
-  MODULES_DIR: $$WERCKER_ROOT$$/modules
+  MANIFEST_DIR: $WERCKER_SOURCE_DIR$$/manifests
+  MODULES_DIR: $$WERCKER_SOURCE_DIR$$/modules
