@@ -13,6 +13,5 @@ script : |
   export PUPPETLABS_RELEASE_DEB=puppetlabs-release-precise.deb
   cd
   wget http://apt.puppetlabs.com/$PUPPETLABS_RELEASE_DEB
-  sudo apt-get update
-  sudo apt-get install puppet facter
+  sudo dpkg -i puppetlabs-release-precise.deb
   rm $PUPPETLABS_RELEASE_DEB
