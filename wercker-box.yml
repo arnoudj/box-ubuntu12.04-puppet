@@ -18,6 +18,4 @@ script : |
   rm $PUPPETLABS_RELEASE_DEB
   export MANIFEST_DIR=$WERCKER_ROOT/manifests
   export MODULES_DIR=$WERCKER_ROOT/modules
-  if [ -f $MANIFEST_DIR/init.pp ]; then
-    puppet apply --modulepath=$MODULES_DIR $MANIFEST_DIR/init.pp
-  fi
+  if [ -f $MANIFEST_DIR/init.pp ]; then puppet apply --modulepath=$MODULES_DIR $MANIFEST_DIR/init.pp; fi
