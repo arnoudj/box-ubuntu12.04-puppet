@@ -16,3 +16,6 @@ script : |
   sudo apt-get update
   sudo apt-get install puppet facter
   rm $PUPPETLABS_RELEASE_DEB
+  export MANIFEST_DIR=$WERCKER_ROOT/manifests
+  export MODULES_DIR=$WERCKER_ROOT/modules
+  puppet apply --modulepath=$MODULES_DIR $MANIFEST_DIR/init.pp
